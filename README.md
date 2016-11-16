@@ -4,7 +4,7 @@
 Cross-site scripting vulnerability has no impact to confidentiality or availability, and partial impact to integrity, as hackers may write data on the compromised websites by this vulnerability.
 
 ####2. What kind of security attack can exploit this vulnerability (interruption, interception, modification, or fabrication)?
-**Modification and Fabrication(attack on integrity)**: For compromised website, the attackers use known vulnerabilities in web-based applications, exploiting one of these, attackers fold malicious content into the content being delivered from the compromised site.
+*Modification and Fabrication(attack on integrity)*: For compromised website, the attackers use known vulnerabilities in web-based applications, exploiting one of these, attackers fold malicious content into the content being delivered from the compromised site.
 
 
 *Interception(attack on confidentiality)*: For end user, the malicious script can access end-users’ any cookies, session tokens, or other sensitive information retained by the browser and used with that site.
@@ -43,7 +43,7 @@ http://demo.testfire.net/bank/login.aspx
 ####A screenshot (if applicable) of the vulnerability
 ![](http://ww4.sinaimg.cn/bmiddle/aa397b7fjw1dzplsgpdw5j.jpg)
 
-## Vulnerability 1: SQL Injection
+## Vulnerability 2: SQL Injection
 
 ####1. What part of the InfoSec Triad does this vulnerability attack (confidentiality, integrity, or availability)?
 SQL Injection vulnerability has impact to confidentiality and integrity, as hackers may read and modify sensitive data in database without authorization by this vulnerability.
@@ -79,10 +79,11 @@ http://demo.testfire.net/bank/login.aspx
 
 
 ####Steps taken to exploit the vulnerability:
-1. Open Login page at http://demo.testfire.net/bank/login.aspx 
-2. Enter “ "><script>alert(1);</script>” in the userID field
-3. Enter “123” in the password field
+1. Open login page at http://demo.testfire.net/bank/login.aspx
+2. Enter “ZAP' OR '1'='1' --” in the userID field
+3. Enter “ZAP' OR '1'='1' --” in the password field
 4. Click “login” button
 
-
 ####A screenshot (if applicable) of the vulnerability
+
+
