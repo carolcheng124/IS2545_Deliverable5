@@ -35,7 +35,7 @@ http://demo.testfire.net/bank/login.aspx
 
 ####Steps taken to exploit the vulnerability:
 1. Open Login page at http://demo.testfire.net/bank/login.aspx 
-2. Enter ‘“><script>alert(1);</script>’ in the userID field
+2. Enter `“><script>alert(1);</script>` in the userID field
 3. Enter “123” in the password field
 4. Click “login” button
 
