@@ -134,12 +134,7 @@ Remote OS Command Injection vulnerability has impact to confidentiality and inte
 
 **Modification:** modify data in compromised computers
 
-**#
-[ANNOTATION:
-
-BY &#39;Carol Cheng&#39;
-ON &#39;2016-11-16T12:37:48&#39;
-NOTE: &#39;不确定&#39;] ****3. Are attacks that exploit this vulnerability activ**** e or passive?**
+**3. Are attacks that exploit this vulnerability active or passive?**
 
 Active. Hackers modify host system by _unauthorized execution of operating system commands._
 
@@ -249,6 +244,7 @@ Hacker could make the user do any operation if the user have the privilege. For 
 
 **The PoC HTML Source code:**
 
+~~~~
 &lt;html&gt;
   &lt;body&gt;
     &lt;form action=&quot;http://demo.testfire.net/bank/customize.aspx&quot;&gt;
@@ -257,6 +253,7 @@ Hacker could make the user do any operation if the user have the privilege. For 
     &lt;/form&gt;
   &lt;/body&gt;
 &lt;/html&gt;
+~~~~
 
 **A screenshot (if applicable) of the vulnerability.**
 
