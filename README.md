@@ -55,7 +55,7 @@ SQL Injection vulnerability has impact to confidentiality and integrity, as hack
 
 ####3. Are attacks that exploit this vulnerability active or passive?
 
-Active. Hackers have to insertion or "injection" of a SQL query via the input data from the client to the application.
+Active. Hackers modify the database by insertion or "injection" of a SQL query via the input data from the client to the application.
 
 ####4. What business value would be lost due to exploiting this vulnerability (data loss, unauthorized access, denial of service, etc)?
 Data loss, unauthorized access, execute administration operations on the database (such as shutdown the DBMS), and in some cases issue commands to the operating system.
@@ -89,3 +89,37 @@ http://demo.testfire.net/bank/login.aspx
 ![](https://github.com/carolcheng124/IS2545_Deliverable5/blob/master/screenshots/SQL_injection_1.png)
 ![](https://github.com/carolcheng124/IS2545_Deliverable5/blob/master/screenshots/SQL_injection_2.png)
 
+## Vulnerability 5: Remote OS Command Injection
+
+####1. What part of the InfoSec Triad does this vulnerability attack (confidentiality, integrity, or availability)?
+Remote OS Command Injection vulnerability has impact to confidentiality and integrity, as hackers may execution of arbitrary commands on the host operating system via a vulnerable application, which allows them to read and modify sensitive data without authorization.
+
+####2. What kind of security attack can exploit this vulnerability (interruption, interception, modification, or fabrication)?
+*Interception(attack on confidentiality)*: read sensitive data in compromised computers
+*Modification(attack on integrity)*:  modify data in compromised computers
+
+####3. Are attacks that exploit this vulnerability active or passive?
+
+Active. Hackers modify host system by unauthorized execution of operating system commands.
+
+####4. What business value would be lost due to exploiting this vulnerability (data loss, unauthorized access, denial of service, etc)?
+Issue commands to the operating system, leading data loss, unauthorized access, execute administration operations with the elevated privilege.
+
+####5. What steps should the development team take to fix this vulnerability?
+*Use existed library or API*: a developer should use existing API or library calls rather than external processes to recreate the desired functionality for their language.
+
+*Input validation*: If no such available API exists, the developer should check all input for malicious characters. Define the legal characters of input.
+
+####The URL of the website with the described vulnerability
+http://www.webscantest.com/osrun/whois.php
+
+
+####Steps taken to exploit the vulnerability:
+1. Open web page at http://www.webscantest.com/osrun/whois.php 
+2. Enter “ZAP&cat /etc/passwd&” in the domain/lookup field
+3. Click “lookup” button
+
+
+####A screenshot (if applicable) of the vulnerability
+![](https://github.com/carolcheng124/IS2545_Deliverable5/blob/master/screenshots/remote_1.png)
+![](https://github.com/carolcheng124/IS2545_Deliverable5/blob/master/screenshots/remote_2.png)
