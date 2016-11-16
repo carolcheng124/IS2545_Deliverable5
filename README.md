@@ -41,7 +41,8 @@ http://demo.testfire.net/bank/login.aspx
 
 
 ####A screenshot (if applicable) of the vulnerability
-![](http://ww4.sinaimg.cn/bmiddle/aa397b7fjw1dzplsgpdw5j.jpg)
+![](https://github.com/carolcheng124/IS2545_Deliverable5/blob/master/screenshots/xss_1%20PM.png)
+![](https://github.com/carolcheng124/IS2545_Deliverable5/blob/master/screenshots/xss_2.png)
 
 ## Vulnerability 2: SQL Injection
 
@@ -85,5 +86,6 @@ http://demo.testfire.net/bank/login.aspx
 4. Click “login” button
 
 ####A screenshot (if applicable) of the vulnerability
-
+![](https://github.com/carolcheng124/IS2545_Deliverable5/blob/master/screenshots/SQL_injection_1.png)
+![](https://github.com/carolcheng124/IS2545_Deliverable5/blob/master/screenshots/SQL_injection_2.png)
 
