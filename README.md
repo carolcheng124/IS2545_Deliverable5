@@ -89,7 +89,7 @@ http://demo.testfire.net/bank/login.aspx
 ![](https://github.com/carolcheng124/IS2545_Deliverable5/blob/master/screenshots/SQL_injection_1.png)
 ![](https://github.com/carolcheng124/IS2545_Deliverable5/blob/master/screenshots/SQL_injection_2.png)
 
-## Vulnerability 5: Remote OS Command Injection
+## Vulnerability 3: Remote OS Command Injection
 
 ####1. What part of the InfoSec Triad does this vulnerability attack (confidentiality, integrity, or availability)?
 Remote OS Command Injection vulnerability has impact to confidentiality and integrity, as hackers may execution of arbitrary commands on the host operating system via a vulnerable application, which allows them to read and modify sensitive data without authorization.
