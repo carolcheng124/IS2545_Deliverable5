@@ -1,12 +1,10 @@
-# IS2545_Deliverable5
-
 ## Vulnerability 1: Cross-Site Scripting/XSS (Reflected)
 
 ####1. What part of the InfoSec Triad does this vulnerability attack (confidentiality, integrity, or availability)?
 Cross-site scripting vulnerability has no impact to confidentiality or availability, and partial impact to integrity, as hackers may write data on the compromised websites by this vulnerability.
 
 ####2. What kind of security attack can exploit this vulnerability (interruption, interception, modification, or fabrication)?
-*Modification and Fabrication(attack on integrity)*: For compromised website, the attackers use known vulnerabilities in web-based applications, exploiting one of these, attackers fold malicious content into the content being delivered from the compromised site.
+**Modification and Fabrication(attack on integrity)**: For compromised website, the attackers use known vulnerabilities in web-based applications, exploiting one of these, attackers fold malicious content into the content being delivered from the compromised site.
 
 
 *Interception(attack on confidentiality)*: For end user, the malicious script can access end-users’ any cookies, session tokens, or other sensitive information retained by the browser and used with that site.
@@ -44,3 +42,47 @@ http://demo.testfire.net/bank/login.aspx
 
 ####A screenshot (if applicable) of the vulnerability
 ![](http://ww4.sinaimg.cn/bmiddle/aa397b7fjw1dzplsgpdw5j.jpg)
+
+## Vulnerability 1: SQL Injection
+
+####1. What part of the InfoSec Triad does this vulnerability attack (confidentiality, integrity, or availability)?
+SQL Injection vulnerability has impact to confidentiality and integrity, as hackers may read and modify sensitive data in database without authorization by this vulnerability.
+
+####2. What kind of security attack can exploit this vulnerability (interruption, interception, modification, or fabrication)?
+*Interception(attack on confidentiality)*: read sensitive data from the database
+*Modification(attack on integrity)*: modify database data (Insert/Update/Delete)
+
+####3. Are attacks that exploit this vulnerability active or passive?
+
+Active. Hackers have to insertion or "injection" of a SQL query via the input data from the client to the application.
+
+####4. What business value would be lost due to exploiting this vulnerability (data loss, unauthorized access, denial of service, etc)?
+Data loss, unauthorized access, execute administration operations on the database (such as shutdown the DBMS), and in some cases issue commands to the operating system.
+
+####5. What steps should the development team take to fix this vulnerability?
+*Pattern check*: Integer, float or boolean,string parameters can be checked if their value is valid representation for the given type. Strings that must follow some strict pattern (date, UUID, alphanumeric only, etc.) can be checked if they match this pattern.
+
+*Parameterized statements*: instead of embedding user input in the statement, parameterized statements that work with parameters can be used. Hence the SQL injection would simply be treated as a strange (and probably invalid) parameter value.
+
+
+*Escaping*: prevent injections is to escape characters that have a special meaning in SQL
+
+
+*Database permissions*: Limiting the permissions on the database login used by the web application.
+
+
+*User training*: training users not to type in restricted inputs in input areas.
+
+
+####The URL of the website with the described vulnerability
+http://demo.testfire.net/bank/login.aspx
+
+
+####Steps taken to exploit the vulnerability:
+1. Open Login page at http://demo.testfire.net/bank/login.aspx 
+2. Enter “ "><script>alert(1);</script>” in the userID field
+3. Enter “123” in the password field
+4. Click “login” button
+
+
+####A screenshot (if applicable) of the vulnerability
